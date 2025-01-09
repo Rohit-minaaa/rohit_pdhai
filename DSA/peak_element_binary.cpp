@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-void findplace(int A[],int l, int h, int & res)
+int findplace(int A[],int l, int h, int & res)
 {
 
                     while(l<=h)
@@ -11,6 +11,7 @@ void findplace(int A[],int l, int h, int & res)
                         if(A[mid]>A[mid+1] && A[mid]>A[mid-1])
                         {
                             res=mid;
+                            return mid;
                         }
                         else if(A[mid]<A[mid-1])
                         {
@@ -36,7 +37,7 @@ void findplace(int A[],int l, int h, int & res)
                     }
                 
                 }
-               cout<<res<<" A"<<endl;
+               return res;
     
    
 }
